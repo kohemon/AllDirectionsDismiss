@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		55DD9ECA249605E000464797 /* AllDirectionsDismiss.h in Headers */ = {isa = PBXBuildFile; fileRef = 55DD9EC8249605E000464797 /* AllDirectionsDismiss.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55DD9ED32496067E00464797 /* AllDirectionsDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9ED22496067E00464797 /* AllDirectionsDismiss.swift */; };
+		55DD9ED5249606C100464797 /* DragDismissGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9ED4249606C100464797 /* DragDismissGestureRecognizer.swift */; };
+		55DD9ED72496070600464797 /* DragInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9ED62496070600464797 /* DragInteractionController.swift */; };
+		55DD9ED92496072C00464797 /* PopGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9ED82496072C00464797 /* PopGestureRecognizer.swift */; };
+		55DD9EDB2496088000464797 /* UIPanGestureRecognizer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EDA2496088000464797 /* UIPanGestureRecognizer+Extension.swift */; };
+		55DD9EDD249608A300464797 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EDC249608A300464797 /* UIScrollView+Extension.swift */; };
+		55DD9EDF2496092F00464797 /* DragDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EDE2496092F00464797 /* DragDismissAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		55DD9EC5249605E000464797 /* AllDirectionsDismiss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AllDirectionsDismiss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DD9EC8249605E000464797 /* AllDirectionsDismiss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllDirectionsDismiss.h; sourceTree = "<group>"; };
 		55DD9EC9249605E000464797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55DD9ED22496067E00464797 /* AllDirectionsDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDirectionsDismiss.swift; sourceTree = "<group>"; };
+		55DD9ED4249606C100464797 /* DragDismissGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDismissGestureRecognizer.swift; sourceTree = "<group>"; };
+		55DD9ED62496070600464797 /* DragInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragInteractionController.swift; sourceTree = "<group>"; };
+		55DD9ED82496072C00464797 /* PopGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopGestureRecognizer.swift; sourceTree = "<group>"; };
+		55DD9EDA2496088000464797 /* UIPanGestureRecognizer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPanGestureRecognizer+Extension.swift"; sourceTree = "<group>"; };
+		55DD9EDC249608A300464797 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		55DD9EDE2496092F00464797 /* DragDismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDismissAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +44,7 @@
 		55DD9EBB249605E000464797 = {
 			isa = PBXGroup;
 			children = (
+				55DD9ED12496064D00464797 /* Source */,
 				55DD9EC7249605E000464797 /* AllDirectionsDismiss */,
 				55DD9EC6249605E000464797 /* Products */,
 			);
@@ -50,6 +65,20 @@
 				55DD9EC9249605E000464797 /* Info.plist */,
 			);
 			path = AllDirectionsDismiss;
+			sourceTree = "<group>";
+		};
+		55DD9ED12496064D00464797 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				55DD9ED22496067E00464797 /* AllDirectionsDismiss.swift */,
+				55DD9ED4249606C100464797 /* DragDismissGestureRecognizer.swift */,
+				55DD9ED62496070600464797 /* DragInteractionController.swift */,
+				55DD9ED82496072C00464797 /* PopGestureRecognizer.swift */,
+				55DD9EDA2496088000464797 /* UIPanGestureRecognizer+Extension.swift */,
+				55DD9EDC249608A300464797 /* UIScrollView+Extension.swift */,
+				55DD9EDE2496092F00464797 /* DragDismissAnimationController.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +124,7 @@
 				TargetAttributes = {
 					55DD9EC4249605E000464797 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -131,6 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DD9ED72496070600464797 /* DragInteractionController.swift in Sources */,
+				55DD9EDD249608A300464797 /* UIScrollView+Extension.swift in Sources */,
+				55DD9EDF2496092F00464797 /* DragDismissAnimationController.swift in Sources */,
+				55DD9ED5249606C100464797 /* DragDismissGestureRecognizer.swift in Sources */,
+				55DD9EDB2496088000464797 /* UIPanGestureRecognizer+Extension.swift in Sources */,
+				55DD9ED32496067E00464797 /* AllDirectionsDismiss.swift in Sources */,
+				55DD9ED92496072C00464797 /* PopGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +297,7 @@
 		55DD9ECE249605E000464797 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D3JQUY48JT;
@@ -276,6 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kohemon.com.AllDirectionsDismiss;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +323,7 @@
 		55DD9ECF249605E000464797 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D3JQUY48JT;
