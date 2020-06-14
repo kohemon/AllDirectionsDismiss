@@ -13,7 +13,7 @@ class ScrollViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerView: UIView!
-    var fourDirection: AllDirectionsDismiss?
+    var allDirectionsDismiss: AllDirectionsDismiss?
     var dismissData: ViewController.DismissData?
     
     override func viewDidLoad() {
@@ -22,20 +22,20 @@ class ScrollViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        fourDirection = AllDirectionsDismiss(scrollView: tableView)
+        allDirectionsDismiss = AllDirectionsDismiss(scrollView: tableView)
         // set percent to dismiss
-        fourDirection?.dismissPercent = dismissData!.percent
+        allDirectionsDismiss?.dismissPercent = dismissData!.percent
         // set velocity to dismiss
-        fourDirection?.dismissVelocity = dismissData!.velocity
+        allDirectionsDismiss?.dismissVelocity = dismissData!.velocity
         // set alpha to background view alpha
-        fourDirection?.backgroundAlpha = dismissData!.backgroundAlpha
+        allDirectionsDismiss?.backgroundAlpha = dismissData!.backgroundAlpha
         // set alpha to background view color
-        fourDirection?.backgroundColor = dismissData!.backgroundColor
+        allDirectionsDismiss?.backgroundColor = dismissData!.backgroundColor
         
         // add dismiss gesture to other view when use scrollview
         let headerPanGesture = DragDismissGestureRecognizer()
         headerView.addGestureRecognizer(headerPanGesture)
-        fourDirection?.addDismissGesture(panGesture: headerPanGesture)
+        allDirectionsDismiss?.addDismissGesture(panGesture: headerPanGesture)
     }
 
     @IBAction func dismiss(_ sender: Any) {

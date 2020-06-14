@@ -11,22 +11,22 @@ import AllDirectionsDismiss
 
 class SingleViewController: UIViewController {
 
-    var fourDirection: AllDirectionsDismiss?
+    var allDirectionsDismiss: AllDirectionsDismiss?
     var dismissData: ViewController.DismissData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Single"
         
-        fourDirection = AllDirectionsDismiss(viewController: self)
+        allDirectionsDismiss = AllDirectionsDismiss(viewController: self)
         // set percent to dismiss
-        fourDirection?.dismissPercent = dismissData!.percent
+        allDirectionsDismiss?.dismissPercent = dismissData!.percent
         // set velocity to dismiss
-        fourDirection?.dismissVelocity = dismissData!.velocity
+        allDirectionsDismiss?.dismissVelocity = dismissData!.velocity
         // set alpha to background view alpha
-        fourDirection?.backgroundAlpha = dismissData!.backgroundAlpha
+        allDirectionsDismiss?.backgroundAlpha = dismissData!.backgroundAlpha
         // set alpha to background view color
-        fourDirection?.backgroundColor = dismissData!.backgroundColor
+        allDirectionsDismiss?.backgroundColor = dismissData!.backgroundColor
     }
 
     @IBAction func dismiss(_ sender: Any) {
