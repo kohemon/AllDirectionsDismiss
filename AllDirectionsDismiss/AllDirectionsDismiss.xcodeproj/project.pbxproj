@@ -15,6 +15,17 @@
 		55DD9EDB2496088000464797 /* UIPanGestureRecognizer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EDA2496088000464797 /* UIPanGestureRecognizer+Extension.swift */; };
 		55DD9EDD249608A300464797 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EDC249608A300464797 /* UIScrollView+Extension.swift */; };
 		55DD9EDF2496092F00464797 /* DragDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EDE2496092F00464797 /* DragDismissAnimationController.swift */; };
+		55DD9EE724960A0200464797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EE624960A0200464797 /* AppDelegate.swift */; };
+		55DD9EE924960A0200464797 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EE824960A0200464797 /* SceneDelegate.swift */; };
+		55DD9EEB24960A0200464797 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EEA24960A0200464797 /* ViewController.swift */; };
+		55DD9EEE24960A0200464797 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DD9EEC24960A0200464797 /* Main.storyboard */; };
+		55DD9EF124960A0200464797 /* Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EEF24960A0200464797 /* Demo.xcdatamodeld */; };
+		55DD9EF324960A0600464797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DD9EF224960A0600464797 /* Assets.xcassets */; };
+		55DD9EF624960A0600464797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DD9EF424960A0600464797 /* LaunchScreen.storyboard */; };
+		55DD9EFC24960A5B00464797 /* AllDirectionsDismiss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DD9EC5249605E000464797 /* AllDirectionsDismiss.framework */; };
+		55DD9EFE24960C6300464797 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55DD9EFD24960C6300464797 /* background.jpg */; };
+		55DD9F0024960CE800464797 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EFF24960CE800464797 /* ScrollViewController.swift */; };
+		55DD9F0224960D0B00464797 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9F0124960D0B00464797 /* SingleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +39,18 @@
 		55DD9EDA2496088000464797 /* UIPanGestureRecognizer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPanGestureRecognizer+Extension.swift"; sourceTree = "<group>"; };
 		55DD9EDC249608A300464797 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		55DD9EDE2496092F00464797 /* DragDismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDismissAnimationController.swift; sourceTree = "<group>"; };
+		55DD9EE424960A0200464797 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55DD9EE624960A0200464797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55DD9EE824960A0200464797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		55DD9EEA24960A0200464797 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55DD9EED24960A0200464797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55DD9EF024960A0200464797 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
+		55DD9EF224960A0600464797 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55DD9EF524960A0600464797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55DD9EF724960A0600464797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55DD9EFD24960C6300464797 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		55DD9EFF24960CE800464797 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		55DD9F0124960D0B00464797 /* SingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +58,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55DD9EE124960A0200464797 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55DD9EFC24960A5B00464797 /* AllDirectionsDismiss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +77,9 @@
 			children = (
 				55DD9ED12496064D00464797 /* Source */,
 				55DD9EC7249605E000464797 /* AllDirectionsDismiss */,
+				55DD9EE524960A0200464797 /* Demo */,
 				55DD9EC6249605E000464797 /* Products */,
+				55DD9EFB24960A5B00464797 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				55DD9EC5249605E000464797 /* AllDirectionsDismiss.framework */,
+				55DD9EE424960A0200464797 /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +113,31 @@
 				55DD9EDE2496092F00464797 /* DragDismissAnimationController.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		55DD9EE524960A0200464797 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				55DD9EFD24960C6300464797 /* background.jpg */,
+				55DD9EE624960A0200464797 /* AppDelegate.swift */,
+				55DD9EE824960A0200464797 /* SceneDelegate.swift */,
+				55DD9EEA24960A0200464797 /* ViewController.swift */,
+				55DD9EFF24960CE800464797 /* ScrollViewController.swift */,
+				55DD9F0124960D0B00464797 /* SingleViewController.swift */,
+				55DD9EEC24960A0200464797 /* Main.storyboard */,
+				55DD9EF224960A0600464797 /* Assets.xcassets */,
+				55DD9EF424960A0600464797 /* LaunchScreen.storyboard */,
+				55DD9EF724960A0600464797 /* Info.plist */,
+				55DD9EEF24960A0200464797 /* Demo.xcdatamodeld */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		55DD9EFB24960A5B00464797 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,18 +172,39 @@
 			productReference = 55DD9EC5249605E000464797 /* AllDirectionsDismiss.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		55DD9EE324960A0200464797 /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55DD9EF824960A0600464797 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				55DD9EE024960A0200464797 /* Sources */,
+				55DD9EE124960A0200464797 /* Frameworks */,
+				55DD9EE224960A0200464797 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = 55DD9EE424960A0200464797 /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		55DD9EBC249605E000464797 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = kohei;
 				TargetAttributes = {
 					55DD9EC4249605E000464797 = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1150;
+					};
+					55DD9EE324960A0200464797 = {
+						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
@@ -142,6 +222,7 @@
 			projectRoot = "";
 			targets = (
 				55DD9EC4249605E000464797 /* AllDirectionsDismiss */,
+				55DD9EE324960A0200464797 /* Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -151,6 +232,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55DD9EE224960A0200464797 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55DD9EF624960A0600464797 /* LaunchScreen.storyboard in Resources */,
+				55DD9EFE24960C6300464797 /* background.jpg in Resources */,
+				55DD9EF324960A0600464797 /* Assets.xcassets in Resources */,
+				55DD9EEE24960A0200464797 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +263,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		55DD9EE024960A0200464797 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55DD9F0224960D0B00464797 /* SingleViewController.swift in Sources */,
+				55DD9EEB24960A0200464797 /* ViewController.swift in Sources */,
+				55DD9EE724960A0200464797 /* AppDelegate.swift in Sources */,
+				55DD9F0024960CE800464797 /* ScrollViewController.swift in Sources */,
+				55DD9EF124960A0200464797 /* Demo.xcdatamodeld in Sources */,
+				55DD9EE924960A0200464797 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		55DD9EEC24960A0200464797 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55DD9EED24960A0200464797 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55DD9EF424960A0600464797 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55DD9EF524960A0600464797 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		55DD9ECB249605E000464797 /* Debug */ = {
@@ -345,6 +469,42 @@
 			};
 			name = Release;
 		};
+		55DD9EF924960A0600464797 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3JQUY48JT;
+				INFOPLIST_FILE = Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kohemon.com.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55DD9EFA24960A0600464797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3JQUY48JT;
+				INFOPLIST_FILE = Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kohemon.com.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -366,7 +526,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		55DD9EF824960A0600464797 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55DD9EF924960A0600464797 /* Debug */,
+				55DD9EFA24960A0600464797 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55DD9EEF24960A0200464797 /* Demo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55DD9EF024960A0200464797 /* Demo.xcdatamodel */,
+			);
+			currentVersion = 55DD9EF024960A0200464797 /* Demo.xcdatamodel */;
+			path = Demo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 55DD9EBC249605E000464797 /* Project object */;
 }
