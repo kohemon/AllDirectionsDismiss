@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5533B48F2496666F007DDCF7 /* AllDirectionsDismiss.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55DD9EC5249605E000464797 /* AllDirectionsDismiss.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		55DD9ECA249605E000464797 /* AllDirectionsDismiss.h in Headers */ = {isa = PBXBuildFile; fileRef = 55DD9EC8249605E000464797 /* AllDirectionsDismiss.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55DD9ED32496067E00464797 /* AllDirectionsDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9ED22496067E00464797 /* AllDirectionsDismiss.swift */; };
 		55DD9ED5249606C100464797 /* DragDismissGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9ED4249606C100464797 /* DragDismissGestureRecognizer.swift */; };
@@ -27,6 +28,19 @@
 		55DD9F0024960CE800464797 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9EFF24960CE800464797 /* ScrollViewController.swift */; };
 		55DD9F0224960D0B00464797 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD9F0124960D0B00464797 /* SingleViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5533B48E2496660F007DDCF7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5533B48F2496666F007DDCF7 /* AllDirectionsDismiss.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		55DD9EC5249605E000464797 /* AllDirectionsDismiss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AllDirectionsDismiss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +190,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55DD9EF824960A0600464797 /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
+				5533B48E2496660F007DDCF7 /* CopyFiles */,
 				55DD9EE024960A0200464797 /* Sources */,
 				55DD9EE124960A0200464797 /* Frameworks */,
 				55DD9EE224960A0200464797 /* Resources */,
