@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name           = "AllDirectionsDismiss"
-  spec.version        = "1.0"
+  spec.version        = "1.1"
   spec.summary        = "AllDirectionsDismiss allows you to easily dismiss a viewController by scrolling in all four directions."
   spec.description    = <<-DESC
 AllDirectionsDismiss allows you to easily dismiss a viewController by scrolling in all four directions.
