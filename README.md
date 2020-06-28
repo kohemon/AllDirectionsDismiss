@@ -50,16 +50,14 @@ class ViewController: UIViewController {
 }
 ```
 
-If you're using a ScrollView, the top and bottom If you want to add a dismissal, use the ***addDismissGesture( panGesture: DragDismissGestureRecognizer)*** You can use it.
+If you're using a ScrollView, the top and bottom If you want to add a dismissal, use the ***addDismissGesture(view: UIView)*** You can use it.
 
 ```swift
 let headerView = UIView()
-let headerPanGesture = DragDismissGestureRecognizer()
-headerView.addGestureRecognizer(headerPanGesture)
-allDirectionsDismiss?.addDismissGesture(panGesture: headerPanGesture)
+allDirectionsDismiss?.addDismissGesture(view: headerView)
 ```
 
-## use with ViewController
+### use with ViewController
 
 ```swift 
 import UIKit
@@ -91,9 +89,17 @@ class ViewController: UIViewController {
 
 ## Customize
 
-### dismissPercent
+### allowDismissDirection
 
-![dismiss_percent](https://user-images.githubusercontent.com/13994930/84598089-19902200-aea3-11ea-9e60-bcd9f3eddb77.gif)
+You can specify the direction of the dismissal to be allowed.
+
+default value is ***[.down, .up, .left, .right]***
+
+```swift
+allDirectionsDismiss?.allowDismissDirection = [.up, .right]
+```
+
+### dismissPercent
 
 You can specify the percentages to dismiss.
 
@@ -103,21 +109,24 @@ default value is ***0.3*** (min is ***0***, max is ***1***)
 allDirectionsDismiss?.dismissPercent = 0.15
 ```
 
-### dismissVelocity
+![dismiss_percent](https://user-images.githubusercontent.com/13994930/84598089-19902200-aea3-11ea-9e60-bcd9f3eddb77.gif)
 
-![dismiss_velocity](https://user-images.githubusercontent.com/13994930/84598090-1a28b880-aea3-11ea-8bf7-95db56b761b3.gif)
+
+### dismissVelocity
 
 You can specify the velocity to dismiss.
 
-default value is ***1000*** (min is ***0***, max is ***10000***)
+default value is ***500*** (min is ***0***, max is ***1000***)
 
 ```swift
-allDirectionsDismiss?.dismissVelocity = 500
+allDirectionsDismiss?.dismissVelocity = 1000
 ```
 
-### backgroundAlpha
+![dismiss_velocity](https://user-images.githubusercontent.com/13994930/84598090-1a28b880-aea3-11ea-8bf7-95db56b761b3.gif)
 
-![background_alpha](https://user-images.githubusercontent.com/13994930/84598081-12691400-aea3-11ea-9462-db3ed2c8dc0e.gif)
+
+
+### backgroundAlpha
 
 You can change the alpha of the background.
 
@@ -127,9 +136,10 @@ default value is ***0.9*** (min is ***0***, max is ***1***)
 allDirectionsDismiss?.backgroundAlpha = 0.0
 ```
 
-### backgroundColor
+![background_alpha](https://user-images.githubusercontent.com/13994930/84598081-12691400-aea3-11ea-9462-db3ed2c8dc0e.gif)
 
-![background_color](https://user-images.githubusercontent.com/13994930/84598086-185ef500-aea3-11ea-82e0-e2df9b55ac25.gif)
+
+### backgroundColor
 
 You can change the color of the background.
 
@@ -138,6 +148,9 @@ default color is black.
 ```swift
 allDirectionsDismiss?.backgroundColor = .red
 ```
+
+![background_color](https://user-images.githubusercontent.com/13994930/84598086-185ef500-aea3-11ea-82e0-e2df9b55ac25.gif)
+
 
 ## Installation
 

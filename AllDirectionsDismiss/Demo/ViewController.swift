@@ -54,16 +54,52 @@ class ViewController: UIViewController {
     @IBOutlet weak var backgroundAlphaLabel: UILabel!
     @IBOutlet weak var backdroundColorPicker: UIPickerView!
     
-    typealias DismissData = (percent: CGFloat, velocity: CGFloat, backgroundAlpha: CGFloat, backgroundColor: UIColor)
+    typealias DismissData = (allowDismissDirection: [PanDirection], percent: CGFloat, velocity: CGFloat, backgroundAlpha: CGFloat, backgroundColor: UIColor)
     
-    private var dismissData: DismissData = DismissData(percent: AllDirectionsDismiss.Defaults.dismissPercent,
-                                               velocity: AllDirectionsDismiss.Defaults.dismissVelocity,
-                                               backgroundAlpha: AllDirectionsDismiss.Defaults.backgroundAlpha,
-                                               backgroundColor: AllDirectionsDismiss.Defaults.backgroundColor)
+    private var dismissData: DismissData = DismissData(allowDismissDirection: AllDirectionsDismiss.Defaults.allowDismissDirection,percent: AllDirectionsDismiss.Defaults.dismissPercent,
+                                                       velocity: AllDirectionsDismiss.Defaults.dismissVelocity,
+                                                       backgroundAlpha: AllDirectionsDismiss.Defaults.backgroundAlpha,
+                                                       backgroundColor: AllDirectionsDismiss.Defaults.backgroundColor)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func tappedUp(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        if sender.isSelected {
+            dismissData.allowDismissDirection.append(.up)
+        } else {
+            dismissData.allowDismissDirection = dismissData.allowDismissDirection.filter { $0 != .up }
+        }
+    }
+    
+    @IBAction func tappedDown(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        if sender.isSelected {
+            dismissData.allowDismissDirection.append(.down)
+        } else {
+            dismissData.allowDismissDirection = dismissData.allowDismissDirection.filter { $0 != .down }
+        }
+    }
+    
+    @IBAction func tappedLeft(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        if sender.isSelected {
+            dismissData.allowDismissDirection.append(.left)
+        } else {
+            dismissData.allowDismissDirection = dismissData.allowDismissDirection.filter { $0 != .left }
+        }
+    }
+    
+    @IBAction func tappedRight(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        if sender.isSelected {
+            dismissData.allowDismissDirection.append(.right)
+        } else {
+            dismissData.allowDismissDirection = dismissData.allowDismissDirection.filter { $0 != .right }
+        }
     }
     
     @IBAction func moveDismissPercentSlider(_ sender: UISlider) {
@@ -106,7 +142,7 @@ class ViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
-    @IBAction func taooedNavPopWithScrollButton(_ sender: Any) {
+    @IBAction func tappedNavPopWithScrollButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: "ScrollViewController") as! ScrollViewController
         vc.dismissData = dismissData
         let nav = UINavigationController(rootViewController: vc)

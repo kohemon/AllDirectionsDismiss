@@ -13,7 +13,7 @@ public class AllDirectionsDismiss: NSObject {
     public struct Defaults {
         private init() {}
         public static let dismissPercent: CGFloat = 0.3
-        public static let dismissVelocity: CGFloat = 1000
+        public static let dismissVelocity: CGFloat = 600
         public static let allowDismissDirection: [PanDirection] = [.down, .up, .left, .right]
         public static let backgroundAlpha: CGFloat = 0.9
         public static let backgroundColor: UIColor = .black
@@ -60,8 +60,11 @@ public class AllDirectionsDismiss: NSObject {
     private var animationController: UIViewControllerAnimatedTransitioning?
     private var currentDirection: PanDirection?
     
-    public func addDismissGesture(panGesture: DragDismissGestureRecognizer) {
-        panGesture.addTarget(self, action: #selector(handleDismissGestureRecognizer(_:)))
+    
+    public func addDismissGesture(view: UIView) {
+        let gesture = DragDismissGestureRecognizer()
+        view.addGestureRecognizer(gesture)
+        gesture.addTarget(self, action: #selector(handleDismissGestureRecognizer(_:)))
     }
     
     @objc private func handlePopGestureRecognizer(_ sender: UIPanGestureRecognizer) {

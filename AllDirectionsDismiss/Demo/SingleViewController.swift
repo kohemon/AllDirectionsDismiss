@@ -19,6 +19,8 @@ class SingleViewController: UIViewController {
         title = "Single"
         
         allDirectionsDismiss = AllDirectionsDismiss(viewController: self)
+        //set allow dismiss direction
+        allDirectionsDismiss?.allowDismissDirection = dismissData!.allowDismissDirection
         // set percent to dismiss
         allDirectionsDismiss?.dismissPercent = dismissData!.percent
         // set velocity to dismiss
