@@ -87,7 +87,7 @@ class ViewController: UIViewController {
     @IBAction func tappedPopButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: "SingleViewController") as! SingleViewController
         vc.dismissData = dismissData
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .currentContext
         present(vc, animated: true, completion: nil)
     }
     
@@ -95,14 +95,14 @@ class ViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(identifier: "SingleViewController") as! SingleViewController
         vc.dismissData = dismissData
         let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
+        nav.modalPresentationStyle = .currentContext
         present(nav, animated: true, completion: nil)
     }
     
     @IBAction func tappedPopWithScrollButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: "ScrollViewController") as! ScrollViewController
         vc.dismissData = dismissData
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .currentContext
         present(vc, animated: true, completion: nil)
     }
     
@@ -110,7 +110,7 @@ class ViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(identifier: "ScrollViewController") as! ScrollViewController
         vc.dismissData = dismissData
         let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
+        nav.modalPresentationStyle = .currentContext
         present(nav, animated: true, completion: nil)
     }
 }

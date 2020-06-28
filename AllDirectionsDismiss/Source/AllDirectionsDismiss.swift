@@ -54,9 +54,9 @@ public class AllDirectionsDismiss: NSObject {
     public var backgroundAlpha: CGFloat = Defaults.backgroundAlpha
     public var backgroundColor: UIColor = Defaults.backgroundColor
     
-    private let viewController: UIViewController
-    private let scrollView: UIScrollView?
-    private let interactionController = DragInteractionController()
+    private var viewController: UIViewController?
+    private var scrollView: UIScrollView?
+    private var interactionController = DragInteractionController()
     private var animationController: UIViewControllerAnimatedTransitioning?
     private var currentDirection: PanDirection?
     
@@ -78,11 +78,11 @@ public class AllDirectionsDismiss: NSObject {
                 scrollView?.bounces = false
                 animationController = DragDismissAnimationController(direction: direction == .right ? .right : .left, backgroundAlpha: backgroundAlpha, backgroundColor: backgroundColor)
                 sender.setTranslation(CGPoint.zero, in: sender.view)
-                viewController.presentingViewController?.dismiss(animated: true, completion: nil)
+                viewController?.presentingViewController?.dismiss(animated: true, completion: nil)
             }
             
             let translation = sender.translation(in: sender.view)
-            let percent = translation.x / viewController.view.bounds.width
+            let percent = translation.x / (viewController?.view.bounds.width ?? 0)
             if currentDirection != sender.direction {
                 if sender.direction == .right && percent > 0 {
                     return
@@ -105,6 +105,7 @@ public class AllDirectionsDismiss: NSObject {
                 }
                 interactionController.finish()
                 animationController = nil
+                dismiss()
                 break
             }
             fallthrough
@@ -137,11 +138,11 @@ public class AllDirectionsDismiss: NSObject {
                 currentDirection = direction
                 scrollView?.bounces = false
                 sender.setTranslation(CGPoint.zero, in: sender.view)
-                viewController.presentingViewController?.dismiss(animated: true, completion: nil)
+                viewController?.presentingViewController?.dismiss(animated: true, completion: nil)
             }
             
             let translation = sender.translation(in: sender.view)
-            let percent = translation.y / viewController.view.bounds.height
+            let percent = translation.y / (viewController?.view.bounds.height ?? 0)
             if currentDirection != sender.direction {
                 if sender.direction == .up && percent < 0 {
                     return
@@ -164,6 +165,7 @@ public class AllDirectionsDismiss: NSObject {
                 }
                 interactionController.finish()
                 animationController = nil
+                dismiss()
                 break
             }
             fallthrough
@@ -176,17 +178,30 @@ public class AllDirectionsDismiss: NSObject {
     
     private func addDismissGesture(navigationBar: UINavigationBar?) {
         let popGestureRecognizer = PopGestureRecognizer(target: self, action: #selector(handlePopGestureRecognizer(_:)))
-        viewController.view.addGestureRecognizer(popGestureRecognizer)
+        viewController?.view.addGestureRecognizer(popGestureRecognizer)
         
         let dismissGestureRecognizer = DragDismissGestureRecognizer(target: self, action: #selector(handleDismissGestureRecognizer(_:)))
         if let scrollView = scrollView {
             scrollView.addGestureRecognizer(dismissGestureRecognizer)
         } else {
-            viewController.view.addGestureRecognizer(dismissGestureRecognizer)
+            viewController?.view.addGestureRecognizer(dismissGestureRecognizer)
         }
         
         let barDismissGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleDismissGestureRecognizer(_:)))
         navigationBar?.addGestureRecognizer(barDismissGestureRecognizer)
+    }
+    
+    private func dismiss() {
+        scrollView?.gestureRecognizers?.forEach({ (gesture) in
+            scrollView?.removeGestureRecognizer(gesture)
+        })
+        scrollView = nil
+        viewController?.view.gestureRecognizers?.forEach({ (gesture) in
+            viewController?.view.removeGestureRecognizer(gesture)
+        })
+        viewController = nil
+        animationController = nil
+        currentDirection = nil
     }
     
     private static func viewControllerFromScrollView(_ scrollView: UIScrollView) -> UIViewController? {
