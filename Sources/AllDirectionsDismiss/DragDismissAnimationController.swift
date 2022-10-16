@@ -38,7 +38,7 @@ class DragDismissAnimationController: NSObject, UIViewControllerAnimatedTransiti
             let toViewController = transitionContext.viewController(forKey: .to),
             
             let fromView = transitionContext.view(forKey: .from),
-            let toView = transitionContext.view(forKey: .to)
+            let toView = toViewController.view.snapshotView(afterScreenUpdates: true)
         else {
             return
         }
