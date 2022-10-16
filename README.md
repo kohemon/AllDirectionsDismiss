@@ -154,13 +154,14 @@ allDirectionsDismiss?.backgroundColor = .red
 
 ## Installation
 
-### Carthage
- - Add `github "kohei1218/AllDirectionsDismiss"` to your Cartfile.
- - Run carthage update.
+### Swift Package Manager
+ - Add it as a dependency within your Package.swift manifest:
 
-### CocoaPods
- - Add `pod 'AllDirectionsDismiss'` to your Podfile.
- - Run pod update.
+```
+dependencies: [
+  .package(url: "https://github.com/kohemon/AllDirectionsDismiss.git", from: "1.1.4")
+]
+```
 
 ## Requirements
  - iOS 10.0 or later
@@ -177,4 +178,4 @@ If you want to help me develop, please send me a PullRequest!
 
 ## License
 
-AllDirectionsDismiss is released under the MIT license. See [LICENSE](https://github.com/kohei1218/AllDirectionsDismiss/blob/master/LICENSE) for details.
+AllDirectionsDismiss is released under the MIT license. See [LICENSE](https://github.com/kohemon/AllDirectionsDismiss/blob/master/LICENSE) for details.
